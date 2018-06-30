@@ -1,0 +1,21 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+ }
+ #gotTrivia, #ins{
+    text-align: center;
+ }
+ #start{
+   margin-left:auto;
+   margin-right: auto; 
+ }
+ #buttDiv{
+     margin-top:20px;
+     text-align: center;
+ }
+ #counter{
+     text-align: center;
+ }
+ #subwrapper{
+     text-align: center;
+ }
