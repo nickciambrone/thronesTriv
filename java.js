@@ -118,25 +118,25 @@ var questions = [
         question:"What is the name of Bran's wolf?",
         answers:["Summer", "Nymeria","Shaggydog","Greywind"],
         correctAnswer:"Summer",
-        video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/4nWeC2tmrHw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        video:'<iframe width="560" height="315" class="img-fluid" src="https://www.youtube.com/embed/4nWeC2tmrHw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     },
     {
         question:"Who saved Tyrion's life in a trial by combat?",
         answers:["Oberyn","Jamie","The Mountain","Bronn"],
         correctAnswer:"Bronn",
-        video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/NN30YMzja6Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        video:'<iframe width="560" height="315" class="img-fluid" src="https://www.youtube.com/embed/NN30YMzja6Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     },
     {
         question:"Who put the poisonous sapphire from Sansa's necklace into Joffrey's drink?",
         answers:["Little Finger","Tyrion","Sansa","Olenna"],
         correctAnswer:"Olenna",
-        video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/bWclAgsyDfU?start=26" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        video:'<iframe width="560" height="315" class="img-fluid" src="https://www.youtube.com/embed/bWclAgsyDfU?start=26" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     },
     {
         question:"Which dragon gets killed by the Night King?",
         answers:["Drogon","Visenya","Viserion","Raeghal"],
         correctAnswer:"Viserion",
-        video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/MJ6ayvGPP0g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        video:'<iframe width="560" height="315" class="img-fluid" src="https://www.youtube.com/embed/MJ6ayvGPP0g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     }
 ];
 console.log(questions)
