@@ -1,7 +1,5 @@
 #body {
-    background: linear-gradient(#130202,#0e0101, rgb(3, 0, 0));
-    background-size: cover;
-    background-repeat: unset;
+ background-color: rgb(3, 1, 1);
     
 }
 .container {
@@ -31,5 +29,9 @@
  }
  button{
      color:black;
+ }
+ #wrapper{
+     border: 4px rgb(90, 8, 8) solid;
+     margin-top: 10px;
  }
  
