@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>GOT Trivia</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
 </head>
-<body>
-    <div id="wrapper">
-        <h1 id ="gotTrivia">Game of Thrones Trivia</h1>
-        <h2 id="ins">How well do you know Game of Thrones?<br> Take this quiz to find out!
-        </h2>
-        <div id="subwrapper">
-            <div id="buttDiv"><button id="start" type="button" class="btn btn-danger">Start</button></div>
+
+<body id="body">
+    <div class="container">
+        <div id="wrapper">
+            <h1 id="gotTrivia">Game of Thrones Trivia</h1>
+            <h2 id="ins">How well do you know Game of Thrones?
+                <br> Tap the Night King to begin.
+                <br> You get 20 seconds for each...
+            </h2>
+            <img src="nightKing.jpg" height=160 width="240" id="start">
+            <div id="subwrapper">
+            </div>
         </div>
-    </div>   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="java.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="java.js"></script>
+    </div>
 </body>
+
 </html>

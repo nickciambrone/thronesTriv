@@ -1,14 +1,21 @@
-body {
-    background-image: url(bg.jpg);
+#body {
+    background: linear-gradient(#130202,#0e0101, rgb(3, 0, 0));
     background-size: cover;
+    background-repeat: unset;
+    
+}
+.container {
+   
+    color: rgb(240, 245, 248);
+    text-shadow: 1px 1px rgb(51, 214, 255);
+    text-align: center;
+    background-size:cover;
+   
  }
  #gotTrivia, #ins{
     text-align: center;
  }
- #start{
-   margin-left:auto;
-   margin-right: auto; 
- }
+
  #buttDiv{
      margin-top:20px;
      text-align: center;
@@ -19,3 +26,10 @@ body {
  #subwrapper{
      text-align: center;
  }
+ .btn-danger{
+     color: black;
+ }
+ button{
+     color:black;
+ }
+ 
