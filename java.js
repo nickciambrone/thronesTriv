@@ -138,9 +138,9 @@ var game = {
         $("#subwrapper").append("<div id='quest'><h2>" + questions[game.currentQuestion].
             question + "</h2></div>");
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
-            $("#subwrapper").append("<br><button type='button' class ='answer-button btn btn-outline-light' id='button-" + i + "' data-name='" + questions[game.currentQuestion].answers[i] + "'>" + questions[game.currentQuestion].answers[i] + "</button><br>");
-
+            $("#subwrapper").append("<br><button type='button' class ='answer-button btn btn-outline-light' id='button-" + i + "' data-name='" + questions[game.currentQuestion].answers[i] + "'>" + questions[game.currentQuestion].answers[i] + "</button><br>");   
         }
+        $("#subwrapper").append("<br><br>")
     },
     nextQuestion: function () {
         game.counter = 20;
@@ -156,9 +156,9 @@ var game = {
         $("#subwrapper").append("<h3>Watch this video to find out...</h3><br><br>");
         $("#subwrapper").append(questions[game.currentQuestion].video+"<br>")
         if (game.currentQuestion == questions.length - 1) {
-            $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Click to view results</button>")
+            $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Click to view results</button><br>")
         }
-        else { $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Next Question</button>") }
+        else { $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Next Question</button><br>") }
         // if (game.currentQuestion == questions.length - 1) {
         //     $(document).on("click", "#next", function () {
         //         game.nextQuestion();
@@ -196,9 +196,9 @@ var game = {
         $("#subwrapper").append("<h2>Now watch this video...<br><br>")
         $("#subwrapper").append(questions[game.currentQuestion].video+"<br>")
         if (game.currentQuestion == questions.length - 1) {
-            $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button>")
+            $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button><br><br>")
         }
-        else { $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Next Question</button>") };
+        else { $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Next Question</button><br><br>") };
         // if (game.currentQuestion == questions.length - 1) {
         //     game.results();
         // }
@@ -216,9 +216,9 @@ var game = {
         $("#subwrapper").append("<h2>Now watch this video to find out...<br><br>");
         $("#subwrapper").append(questions[game.currentQuestion].video+"<br>");
         if (game.currentQuestion == questions.length - 1) {
-            $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button>")
+            $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button><br><br>")
         }
-        else { $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Next Question</button>") };
+        else { $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Next Question</button><br><br>") };
         // if (game.currentQuestion == questions.length - 1) {
         //     game.results()
         // }
