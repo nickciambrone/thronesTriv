@@ -152,9 +152,9 @@ var game = {
     timeUp: function () {
         game.unanswered++
         clearInterval(timer);
-        $("#subwrapper").html("<h2>Out of Time</h2>");
-        $("#subwrapper").append("<h3>Watch this video to find out...</h3>");
-        $("#subwrapper").append(questions[game.currentQuestion].video)
+        $("#subwrapper").html("<h2>Out of Time</h2><br>");
+        $("#subwrapper").append("<h3>Watch this video to find out...</h3><br><br>");
+        $("#subwrapper").append(questions[game.currentQuestion].video+"<br>")
         if (game.currentQuestion == questions.length - 1) {
             $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Click to view results</button>")
         }
@@ -192,9 +192,9 @@ var game = {
         console.log("you got it")
         clearInterval(timer);
         game.correct++;
-        $("#subwrapper").html("<h2>You got it right!</h2>");
-        $("#subwrapper").append("<h2>Now watch this video...")
-        $("#subwrapper").append(questions[game.currentQuestion].video)
+        $("#subwrapper").html("<h2>You got it right!</h2><br>");
+        $("#subwrapper").append("<h2>Now watch this video...<br><br>")
+        $("#subwrapper").append(questions[game.currentQuestion].video+"<br>")
         if (game.currentQuestion == questions.length - 1) {
             $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button>")
         }
@@ -212,9 +212,9 @@ var game = {
         console.log("wrong")
         clearInterval(timer);
         game.incorrect++;
-        $("#subwrapper").html("<h2>You got it wrong!</h2>");
-        $("#subwrapper").append("<h2>Now watch this video to find out...");
-        $("#subwrapper").append(questions[game.currentQuestion].video);
+        $("#subwrapper").html("<h2>You got it wrong!</h2><br>");
+        $("#subwrapper").append("<h2>Now watch this video to find out...<br><br>");
+        $("#subwrapper").append(questions[game.currentQuestion].video+"<br>");
         if (game.currentQuestion == questions.length - 1) {
             $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button>")
         }
