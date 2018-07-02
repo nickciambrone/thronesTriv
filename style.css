@@ -5,7 +5,7 @@
 .container {
    
     color: rgb(240, 245, 248);
-    text-shadow: 1px 1px rgb(51, 214, 255);
+    text-shadow: .5px .5px rgb(51, 214, 255);
     text-align: center;
     background-size:cover;
    
@@ -32,6 +32,13 @@
  }
  #wrapper{
      border: 4px rgb(90, 8, 8) solid;
-     margin-top: 10px;
+     margin-top: 2px;
  }
- 
+ #start{
+     margin-top: -38px;
+     padding-bottom: 12px;
+ }
+ a{
+     text-shadow: 1px 1px black;
+     color: white;
+ }

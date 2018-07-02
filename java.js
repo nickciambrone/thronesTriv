@@ -1,8 +1,12 @@
 $("#start").on("click", function () {
-    $("#start").remove();
+    $(this).remove();
+   
     $("#ins").remove();
     $("#gotTrivia").remove();
+    $("<br>").remove();
     game.loadQuestion();
+    
+
 })
 $(document).on("click", ".answer-button", function (e) {
     game.clicked(e);
@@ -137,6 +141,12 @@ var questions = [
         answers: ["Drogon", "Visenya", "Viserion", "Raeghal"],
         correctAnswer: "Viserion",
         video: '<iframe width="560" height="315" class="img-fluid border border-danger" src="https://www.youtube.com/embed/MJ6ayvGPP0g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+    },
+    {
+        question:"Which substance puts out wildfire?",
+        answers:["Ice","Magic","Sand","Valyrian Steel"],
+        correctAnswer:"Sand",
+        video: '<iframe width="560" height="315" class="img-fluid border border-danger" src="https://www.youtube.com/embed/fuNyWMAWptE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
     }
 ];
 console.log(questions)
@@ -149,7 +159,7 @@ var game = {
     unanswered: 0,
     countdown: function () {
         game.counter--;
-        $("#counter").html("Time left: " + game.counter + " seconds");
+        $("#counter").html("Time left: " + game.counter + " seconds"+"<br>");
         if (game.counter <= 0) {
             console.log("time up");
             game.timeUp();
@@ -157,7 +167,7 @@ var game = {
     },
     loadQuestion: function () {
         timer = setInterval(game.countdown, 1000);
-        $("#subwrapper").html("<h2 id='counter'> Time left: 20 seconds</h2>")
+        $("#subwrapper").html("<h2 id='counter'> Time left: 20 seconds</h2>"+"<br>")
         $("#subwrapper").append("<div id='quest'><h2>" + questions[game.currentQuestion].
             question + "</h2></div>");
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
@@ -176,7 +186,7 @@ var game = {
         game.unanswered++
         clearInterval(timer);
         $("#subwrapper").html("<h2>Out of Time</h2><br>");
-        $("#subwrapper").append("<h3>Watch this video to find out...</h3><br><br>");
+        $("#subwrapper").append("<h3>Watch this video...</h3><br><br>");
         $("#subwrapper").append(questions[game.currentQuestion].video + "<br>")
         if (game.currentQuestion == questions.length - 1) {
             $("#subwrapper").append("<br><button id='next' type='button' class='btn btn-outline-light'>Click to view results</button><br><br>")
@@ -187,11 +197,12 @@ var game = {
     results: function () {
         console.log("game over")
         clearInterval(timer);
-        $("#subwrapper").html("<h3>Quiz Over:")
+        $("#subwrapper").html("<h3>Quiz Over:<br><br>")
+        $("#subwrapper").append("Copy and paste the link for a friend! See who does better! <a href='www.gameofthronestrivia.com'>www.gameofthronestrivia.com</a><br><br>")
         $("#subwrapper").append("<h3>Correct: " + game.correct + "</h3>");
         $("#subwrapper").append("<h3>Incorrect: " + game.incorrect + "</h3>");
         $("#subwrapper").append("<h3>Unanswered: " + game.unanswered) + "</h3>";
-        $("#subwrapper").append("<button id='reset' type='button' class='btn btn-outline-light'> Restart </button>")
+        $("#subwrapper").append("<br><br><button id='reset' type='button' class='btn btn-outline-light'> Restart </button><br><br>")
     },
     clicked: function (e) {
         clearInterval(timer);
@@ -219,7 +230,7 @@ var game = {
         clearInterval(timer);
         game.incorrect++;
         $("#subwrapper").html("<h2>You got it wrong!</h2><br>");
-        $("#subwrapper").append("<h2>Now watch this video to find out...<br><br>");
+        $("#subwrapper").append("<h2>Now watch this video...<br><br>");
         $("#subwrapper").append(questions[game.currentQuestion].video + "<br>");
         if (game.currentQuestion == questions.length - 1) {
             $("#subwrapper").append("<br><button id='next' type ='button' class='btn btn-outline-light'>Click to view results</button><br><br>")
